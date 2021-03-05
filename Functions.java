@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Kyara Lizeth
+ * @author Kyara Lizeth, Quilca Evelyn
  */
 public class Functions {
     
