@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Kyara Lizeth, Quilca Evelyn
+ * @author Kyara Lizeth, Quilca Evelyn.Quishpe Tania 
  */
 public class Functions {
     
