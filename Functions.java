@@ -10,7 +10,11 @@ import java.util.Scanner;
 
 /**
  *
- * @author Kyara Lizeth, Quilca Evelyn.Quishpe Tania 
+ * @author Kyara Lizeth
+ * @author Quilca Evelyn
+ * @author Potosi Daniel
+ * @author Quishpe Tania 
+ * @author Portero Carla
  */
 public class Functions {
     
