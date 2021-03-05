@@ -2,6 +2,7 @@ package space3d;
 
 import java.io.IOException;
 import java.util.Scanner;
+
 /**
  *
  * @author Kyara Lizeth
