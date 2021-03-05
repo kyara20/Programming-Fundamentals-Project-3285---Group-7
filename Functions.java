@@ -45,7 +45,103 @@ public static void main(String[] args) throws IOException {
             System.out.println("7. EXIT  ");
 
             System.out.println("Enter you menu option -->");
-            option = input.nextInt();int sum=0;
+           
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter of the ID Number: ");
+        idNumber= input.nextLine();
+
+        
+        System.out.println(validateId(idNumber, sum));
+        
+        if (validateId(idNumber,sum)){
+            System.out.println("The idNumber " + idNumber + " is valid ");
+        } else {
+           System.out.println("The idNumber " + idNumber + " is NOT valid "); 
+        }
+        
+    }
+
+    private static boolean validateId(String idNumber, int sum) throws NumberFormatException {
+        boolean validId = false;
+        String digitsProvince = idNumber.substring(0,2);
+        if(idNumber.length()!= 10 || Integer.parseInt(digitsProvince) > 24 ||
+                Integer.parseInt(digitsProvince) < 0 || 
+                Integer.parseInt(String.valueOf(idNumber.charAt(2))) > 6)
+            validId = false;
+        else{
+            int a[]=new int [idNumber.length()/2];
+            int b[]=new int [(idNumber.length()/2)];
+            int c=0;
+            int d=1;
+            for (int i = 0; i < idNumber.length()/2; i++) 
+            {
+                a[i]=Integer.parseInt(String.valueOf(idNumber.charAt(c)));
+                c=c+2;
+                if (i < (idNumber.length()/2)-1) {
+                    b[i]=Integer.parseInt(String.valueOf(idNumber.charAt(d)));
+                    d=d+2;
+                }
+            }
+            
+            for (int i = 0; i < a.length; i++) 
+            {
+                a[i]=a[i]*2;
+                if (a[i] >9)
+                    a[i]=a[i]-9;
+                sum=sum+a[i]+b[i];
+            } 
+            int aux=sum/10;
+            int dec=(aux+1)*10;
+            if ((dec - sum) == Integer.parseInt(String.valueOf(idNumber.charAt(idNumber.length()-1))))
+                validId = true;
+            else
+                if(sum%10==0 && idNumber.charAt(idNumber.length()-1)=='0')
+                    validId = true;
+                else          validId = false;
+        }
+        return validId;
+    }
+                    validId = false;
+        }
+        return validId;
+    }
+}
+        
+            switch (option) {
+                case 1:
+                    comptAreaOfRectangle (input);
+                    break;
+
+                case 2:
+                    double inches;
+                    double millimeters;
+                    inches = printTheInchesToConvert(input);
+                    millimeters = calculateInchesToMillimeters(inches);
+                    printResult(inches, millimeters);
+                    break;
+
+                case 3:
+                    double yards;
+                    double meters;
+                    yards = printTheYardsToConvert(input);
+                    meters = calculateYardsToMeters(yards);
+                    printResult1(yards, meters);
+                    break;
+
+                case 4:
+                    double miles;
+                    double kilometers;
+                    miles = printTheMilesToConvert(input);
+                    kilometers = calculateMilesToKilometers(miles);
+                    printResult2(miles, kilometers);
+                    break;
+
+                case 5:
+                    computeDistance(input);
+                    break;
+                case 6:h
+                    int sum=0;
         String idNumber;
 
         Scanner input = new Scanner(System.in);
@@ -106,39 +202,6 @@ public static void main(String[] args) throws IOException {
     }
 }
         
-            switch (option) {
-                case 1:
-                    comptAreaOfRectangle (input);
-                    break;
-
-                case 2:
-                    double inches;
-                    double millimeters;
-                    inches = printTheInchesToConvert(input);
-                    millimeters = calculateInchesToMillimeters(inches);
-                    printResult(inches, millimeters);
-                    break;
-
-                case 3:
-                    double yards;
-                    double meters;
-                    yards = printTheYardsToConvert(input);
-                    meters = calculateYardsToMeters(yards);
-                    printResult1(yards, meters);
-                    break;
-
-                case 4:
-                    double miles;
-                    double kilometers;
-                    miles = printTheMilesToConvert(input);
-                    kilometers = calculateMilesToKilometers(miles);
-                    printResult2(miles, kilometers);
-                    break;
-
-                case 5:
-                    computeDistance(input);
-                    break;
-                case 6:
                     Scanner scanner = new Scanner(System.in);
                     String text;
                     int code;
