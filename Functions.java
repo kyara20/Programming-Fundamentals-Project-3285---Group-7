@@ -45,15 +45,7 @@ public static void main(String[] args) throws IOException {
 
             switch (option) {
                 case 1:
-                    int area;
-                    int base;
-                    int height;
-                    System.out.println("Enter base -> ");
-                    base = input.nextInt();
-                    System.out.println("Enter height -> ");
-                    height = input.nextInt();
-                    area = base * height;
-                    System.out.println("The rectangle area is --> " + area);
+                    comptAreaOfRectangle (input);
                     break;
 
                 case 2:
@@ -122,6 +114,18 @@ public static void main(String[] args) throws IOException {
             }
         } while (option != 7);
 
+    }
+       private static void comptAreaOfRectangle (Scanner input) {
+        System.out.println("Enter rectangle");
+        int base;
+        int height;
+        int areas;
+        System.out.println("Enter base ->");
+        base = input.nextInt();
+        System.out.println("Enter altura");
+        height = input.nextInt();
+        int area6 = base * height;
+        System.out.println("The area of a rectangle: " + area6);
     }
         private static void computeDistance(Scanner input) {
         double X1;
