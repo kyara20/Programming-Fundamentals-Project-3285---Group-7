@@ -81,23 +81,8 @@ public static void main(String[] args) throws IOException {
                     break;
 
                 case 5:
-                    double X1;
-                    double Y1;
-                    double X2;
-                    double Y2;
-                    double distance;
-                    System.out.println("Enter the X coordinate of the first point -> ");
-                    X1 = input.nextDouble();
-                    System.out.println("Enter the Y coordinate of the first point -> ");
-                    Y1 = input.nextDouble();
-                    System.out.println("Enter the X coordinate of the second point -> ");
-                    X2 = input.nextDouble();
-                    System.out.println("Enter the Y coordinate of the second point -> ");
-                    Y2 = input.nextDouble();
-                    distance = Math.sqrt((X2 - X1) * (X2 - X1) + (Y2 - Y1) * (Y2 - Y1));
-                    System.out.printf("The distance between two points is -> " + distance);
+                    computeDistance(input);
                     break;
-
                 case 6:
                     Scanner scanner = new Scanner(System.in);
                     String text;
@@ -137,6 +122,23 @@ public static void main(String[] args) throws IOException {
             }
         } while (option != 7);
 
+    }
+        private static void computeDistance(Scanner input) {
+        double X1;
+        double Y1;
+        double X2;
+        double Y2;
+        double distance;
+        System.out.println("Enter the X coordinate of the first point -> ");
+        X1 = input.nextDouble();
+        System.out.println("Enter the Y coordinate of the first point -> ");
+        Y1 = input.nextDouble();
+        System.out.println("Enter the X coordinate of the second point -> ");
+        X2 = input.nextDouble();
+        System.out.println("Enter the Y coordinate of the second point -> ");
+        Y2 = input.nextDouble();
+        distance = Math.sqrt((X2 - X1) * (X2 - X1) + (Y2 - Y1) * (Y2 - Y1));
+        System.out.printf("The distance between two points is -> " + distance);
     }
 
     private static void printResult2(double miles, double kilometers) {
