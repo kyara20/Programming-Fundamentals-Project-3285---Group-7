@@ -83,6 +83,7 @@ public class Space3D {
                 case 6:
                     computeDistance(input);
                     break;
+                    
                 case 7:
                     Scanner scanner = new Scanner(System.in);
                     String text;
@@ -108,8 +109,8 @@ public class Space3D {
                     } else {
                         System.out.println("Text decrypt: " + decryptCesar(text, code));
                     }
-
                     break;
+                    
                 case 8:
                     System.out.println("GOOD BYE MY FRIEND");
                     System.exit(0);
@@ -120,7 +121,7 @@ public class Space3D {
                     break;
 
             }
-        } while (option != 7);
+        } while (option != 8);
 
     }
     //Valid ID
@@ -213,35 +214,35 @@ public class Space3D {
             miles = input.nextDouble();
             return miles;
     }
-
+    //Yards to Meters transformer
     private static void printResult1(double yards, double meters) {
         System.out.println(yards + " yards equal to " + meters + " meters ");
     }
-
+    //Calculate Yards to Meters
     private static double calculateYardsToMeters(double yards) {
         double meters;
         meters = yards * 0.9144;
         return meters;
     }
-
+    //Print the Yards to Meters
     private static double printTheYardsToConvert(Scanner input) {
         double yards;
         System.out.println("Enter the yards to convert -> ");
         yards = input.nextDouble();
         return yards;
     }
-
+    //Inches to Millimeters transformer
     private static void printResult(double inches, double millimeters) {
         System.out.println(inches + " inches equal to " + millimeters + " millimeters ");
     }
-
+    //Calculate Inches to Millimeters
     private static double printTheInchesToConvert(Scanner input) {
         double inches;
         System.out.println("Enter the inches to convert -> ");
         inches = input.nextDouble();
         return inches;
     }
-
+    //Print the Inches to Millimeters
     private static double calculateInchesToMillimeters(double inches) {
         double millimeters;
         millimeters = inches * 25.4;
