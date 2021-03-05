@@ -2,7 +2,14 @@ package space3d;
 
 import java.io.IOException;
 import java.util.Scanner;
-
+/**
+ *
+ * @author Kyara Lizeth
+ * @author Quilca Evelyn
+ * @author Potosi Daniel
+ * @author Quishpe Tania 
+ * @author Portero Carla
+ */
 public class Space3D {
 
     public static void main(String[] args) throws IOException {
@@ -21,7 +28,7 @@ public class Space3D {
             System.out.println(">>>>  Daniel Potosi  <<<<");
             System.out.println(">>>>  Evelyn Quilca  <<<<");
             System.out.println(">>>>  Tania Quisphe  <<<<");
-            System.out.println("-------------------------------------");
+            System.out.println("_____________________________________ ");
             System.out.println(" ======  CHOOSE AN OPTION  ====== ");
             System.out.println("1. Valid ID ");
             System.out.println("2. Rectangle Area ");
@@ -199,97 +206,4 @@ public class Space3D {
     }
        //Miles to Kilometers transformer
         private static void printResult2(double miles, double kilometers) {
-            System.out.println(miles + " miles equal to " + kilometers + " kilometers ");
-    }
-       //Calculate Miles to Kilometers
-        private static double calculateMilesToKilometers(double miles) {
-            double kilometers;
-            kilometers = miles * 1.6093;
-            return kilometers;
-    }
-       //Print the Miles to Convert
-        private static double printTheMilesToConvert(Scanner input) {
-            double miles;
-            System.out.println("Enter the miles to convert -> ");
-            miles = input.nextDouble();
-            return miles;
-    }
-    //Yards to Meters transformer
-    private static void printResult1(double yards, double meters) {
-        System.out.println(yards + " yards equal to " + meters + " meters ");
-    }
-    //Calculate Yards to Meters
-    private static double calculateYardsToMeters(double yards) {
-        double meters;
-        meters = yards * 0.9144;
-        return meters;
-    }
-    //Print the Yards to Meters
-    private static double printTheYardsToConvert(Scanner input) {
-        double yards;
-        System.out.println("Enter the yards to convert -> ");
-        yards = input.nextDouble();
-        return yards;
-    }
-    //Inches to Millimeters transformer
-    private static void printResult(double inches, double millimeters) {
-        System.out.println(inches + " inches equal to " + millimeters + " millimeters ");
-    }
-    //Calculate Inches to Millimeters
-    private static double printTheInchesToConvert(Scanner input) {
-        double inches;
-        System.out.println("Enter the inches to convert -> ");
-        inches = input.nextDouble();
-        return inches;
-    }
-    //Print the Inches to Millimeters
-    private static double calculateInchesToMillimeters(double inches) {
-        double millimeters;
-        millimeters = inches * 25.4;
-        return millimeters;
-    }
-
-    //Method to encrypt the text
-    private static String encryptCesar(String text, int code) {
-        StringBuilder encrypt = new StringBuilder();
-        code = code % 26;
-        for (int i = 0; i < text.length(); i++) {
-            if (text.charAt(i) >= 'a' && text.charAt(i) <= 'z') {
-                if ((text.charAt(i) + code) > 'z') {
-                    encrypt.append((char) (text.charAt(i) + code - 26));
-                } else {
-                    encrypt.append((char) (text.charAt(i) + code));
-                }
-            } else if (text.charAt(i) >= 'A' && text.charAt(i) <= 'Z') {
-                if ((text.charAt(i) + code) > 'Z') {
-                    encrypt.append((char) (text.charAt(i) + code - 26));
-                } else {
-                    encrypt.append((char) (text.charAt(i) + code));
-                }
-            }
-        }
-        return encrypt.toString();
-    }
-
-    //Method to decrypt the text
-    private static String decryptCesar(String text, int code) {
-        StringBuilder decrypt = new StringBuilder();
-        code = code % 26;
-        for (int i = 0; i < text.length(); i++) {
-            if (text.charAt(i) >= 'a' && text.charAt(i) <= 'z') {
-                if ((text.charAt(i) - code) < 'a') {
-                    decrypt.append((char) (text.charAt(i) - code + 26));
-                } else {
-                    decrypt.append((char) (text.charAt(i) - code));
-                }
-            } else if (text.charAt(i) >= 'A' && text.charAt(i) <= 'Z') {
-                if ((text.charAt(i) - code) < 'A') {
-                    decrypt.append((char) (text.charAt(i) - code + 26));
-                } else {
-                    decrypt.append((char) (text.charAt(i) - code));
-                }
-            }
-        }
-        return decrypt.toString();
-    }   
-}
+            System.out.println(miles + " miles equa
