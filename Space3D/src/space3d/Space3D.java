@@ -19,7 +19,10 @@ public static void main(String[] args) throws IOException {
             double Y1;
             double X2;
             double Y2;
-            double distance;     
+            double distance;
+            double base;
+            double height;
+            double areas;
             
         boolean mainLoop = true;
         int option;
