@@ -7,7 +7,15 @@ public class space3D {
     
 public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
-
+        
+            // Variables
+            double inches;
+            double millimeters;
+            double yards;
+            double meters;
+            double miles;
+            double kilometers;
+            
         boolean mainLoop = true;
         int option;
 
@@ -29,9 +37,10 @@ public static void main(String[] args) throws IOException {
 
                     if (validateId(idNumber,sum)){
                     System.out.println("The idNumber " + idNumber + " is valid ");
-                    } else {
-                        System.out.println("The idNumber " + idNumber + " is NOT valid "); 
-                        }
+                } else {
+                    System.out.println("The idNumber " + idNumber + " is NOT valid "); 
+                }
+
                     break;
 
                 case 2:
@@ -39,24 +48,18 @@ public static void main(String[] args) throws IOException {
                     break;
 
                 case 3:
-                    double inches;
-                    double millimeters;
                     inches = readTheInchesToConvert(input);
                     millimeters = calculateInchesToMillimeters(inches);
                     printResult(inches, millimeters);
                     break;
 
                 case 4:
-                    double yards;
-                    double meters;
                     yards = readTheYardsToConvert(input);
                     meters = calculateYardsToMeters(yards);
                     printResult1(yards, meters);
                     break;
 
-                case 5:
-                    double miles;
-                    double kilometers;
+                case 5:                    
                     miles = readTheMilesToConvert(input);
                     kilometers = calculateMilesToKilometers(miles);
                     printResult2(miles, kilometers);
