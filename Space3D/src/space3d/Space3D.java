@@ -1,44 +1,19 @@
-package space3d;
+package projectunit2;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-/**
- *
- * @author Kyara Lizeth
- * @author Quilca Evelyn
- * @author Potosi Daniel
- * @author Quishpe Tania. 
- * @author Portero Carla
- */
-public class Space3D {
-
-    public static void main(String[] args) throws IOException {
-        // TODO code application logic here
-
+public class space3D {
+    
+public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
 
         boolean mainLoop = true;
         int option;
 
         do {
-            System.out.println("        WELCOME TO OUR MENU     ");
-            System.out.println("__________  PROGRAMMERS  ____________");
-            System.out.println(">>>>  Kyara Pilataxi <<<<");
-            System.out.println(">>>>  Carla Portero  <<<<");
-            System.out.println(">>>>  Daniel Potosi  <<<<");
-            System.out.println(">>>>  Evelyn Quilca  <<<<");
-            System.out.println(">>>>  Tania Quisphe  <<<<");
-            System.out.println("-------------------------------------");
-            System.out.println(" ======  CHOOSE AN OPTION  ====== ");
-            System.out.println("1. Valid ID ");
-            System.out.println("2. Rectangle Area ");
-            System.out.println("3. Inches to Millimeters ");
-            System.out.println("4. Yards to Meters ");
-            System.out.println("5. Miles to Kilometers ");
-            System.out.println("6. Distance between two points");
-            System.out.println("7. Encrypted code");
-            System.out.println("8. EXIT  ");
+            printHeader();
+            printOptionMenu();
 
             System.out.println("Enter you menu option -->");
             option = input.nextInt();
@@ -54,10 +29,9 @@ public class Space3D {
 
                     if (validateId(idNumber,sum)){
                     System.out.println("The idNumber " + idNumber + " is valid ");
-                } else {
-                    System.out.println("The idNumber " + idNumber + " is NOT valid "); 
-                }
-
+                    } else {
+                        System.out.println("The idNumber " + idNumber + " is NOT valid "); 
+                        }
                     break;
 
                 case 2:
@@ -67,7 +41,7 @@ public class Space3D {
                 case 3:
                     double inches;
                     double millimeters;
-                    inches = printTheInchesToConvert(input);
+                    inches = readTheInchesToConvert(input);
                     millimeters = calculateInchesToMillimeters(inches);
                     printResult(inches, millimeters);
                     break;
@@ -75,7 +49,7 @@ public class Space3D {
                 case 4:
                     double yards;
                     double meters;
-                    yards = printTheYardsToConvert(input);
+                    yards = readTheYardsToConvert(input);
                     meters = calculateYardsToMeters(yards);
                     printResult1(yards, meters);
                     break;
@@ -83,7 +57,7 @@ public class Space3D {
                 case 5:
                     double miles;
                     double kilometers;
-                    miles = printTheMilesToConvert(input);
+                    miles = readTheMilesToConvert(input);
                     kilometers = calculateMilesToKilometers(miles);
                     printResult2(miles, kilometers);
                     break;
@@ -91,6 +65,7 @@ public class Space3D {
                 case 6:
                     computeDistance(input);
                     break;
+                    
                 case 7:
                     Scanner scanner = new Scanner(System.in);
                     String text;
@@ -128,11 +103,33 @@ public class Space3D {
                     break;
 
             }
-        } while (option != 7);
+        } while (option != 8);
 
     }
-    //Valid ID
-    private static boolean validateId(String idNumber, int sum) throws NumberFormatException {
+
+    private static void printOptionMenu() {
+        System.out.println(" ======  CHOOSE AN OPTION  ====== ");
+        System.out.println("1. Valid ID ");
+        System.out.println("2. Rectangle Area ");
+        System.out.println("3. Inches to Millimeters ");
+        System.out.println("4. Yards to Meters ");
+        System.out.println("5. Miles to Kilometers ");
+        System.out.println("6. Distance between two points");
+        System.out.println("7. Encrypted code");
+        System.out.println("8. EXIT  ");
+    }
+
+    private static void printHeader() {
+        System.out.println("        WELCOME TO OUR MENU     ");
+        System.out.println("__________  PROGRAMMERS  ____________");
+        System.out.println(">>>>  Kyara Pilataxi <<<<");
+        System.out.println(">>>>  Carla Portero  <<<<");
+        System.out.println(">>>>  Daniel Potosi  <<<<");
+        System.out.println(">>>>  Evelyn Quilca  <<<<");
+        System.out.println(">>>>  Tania Quisphe  <<<<");
+        System.out.println("_____________________________________ ");
+    }
+  private static boolean validateId(String idNumber, int sum) throws NumberFormatException {
         boolean validId = false;
         String digitsProvince = idNumber.substring(0,2);
         if(idNumber.length()!= 10 || Integer.parseInt(digitsProvince) > 24 ||
@@ -172,7 +169,7 @@ public class Space3D {
                     validId = false;
         }
         return validId;
-    }
+    }   
     //Rectangle Area
        private static void comptAreaOfRectangle (Scanner input) {
         System.out.println("Enter rectangle");
@@ -215,45 +212,45 @@ public class Space3D {
             return kilometers;
     }
        //Print the Miles to Convert
-        private static double printTheMilesToConvert(Scanner input) {
+        private static double readTheMilesToConvert(Scanner input) {
             double miles;
             System.out.println("Enter the miles to convert -> ");
             miles = input.nextDouble();
             return miles;
     }
-
-    private static void printResult1(double yards, double meters) {
-        System.out.println(yards + " yards equal to " + meters + " meters ");
+        //Yards to Meters transformer
+        private static void printResult1(double yards, double meters) {
+            System.out.println(yards + " yards equal to " + meters + " meters ");
+    }
+        //Calculate Yards to Meters
+        private static double calculateYardsToMeters(double yards) {
+            double meters;
+            meters = yards * 0.9144;
+            return meters;
+    }
+        //Print the Yards to Convert
+        private static double readTheYardsToConvert(Scanner input) {
+            double yards;
+            System.out.println("Enter the yards to convert -> ");
+            yards = input.nextDouble();
+            return yards;
     }
 
-    private static double calculateYardsToMeters(double yards) {
-        double meters;
-        meters = yards * 0.9144;
-        return meters;
+        private static void printResult(double inches, double millimeters) {
+            System.out.println(inches + " inches equal to " + millimeters + " millimeters ");
     }
 
-    private static double printTheYardsToConvert(Scanner input) {
-        double yards;
-        System.out.println("Enter the yards to convert -> ");
-        yards = input.nextDouble();
-        return yards;
+        private static double readTheInchesToConvert(Scanner input) {
+            double inches;
+            System.out.println("Enter the inches to convert -> ");
+            inches = input.nextDouble();
+            return inches;
     }
 
-    private static void printResult(double inches, double millimeters) {
-        System.out.println(inches + " inches equal to " + millimeters + " millimeters ");
-    }
-
-    private static double printTheInchesToConvert(Scanner input) {
-        double inches;
-        System.out.println("Enter the inches to convert -> ");
-        inches = input.nextDouble();
-        return inches;
-    }
-
-    private static double calculateInchesToMillimeters(double inches) {
-        double millimeters;
-        millimeters = inches * 25.4;
-        return millimeters;
+        private static double calculateInchesToMillimeters(double inches) {
+            double millimeters;
+            millimeters = inches * 25.4;
+            return millimeters;
     }
 
     //Method to encrypt the text
@@ -299,4 +296,4 @@ public class Space3D {
         }
         return decrypt.toString();
     }   
-} 
+}
