@@ -15,6 +15,11 @@ public static void main(String[] args) throws IOException {
             double meters;
             double miles;
             double kilometers;
+            double X1;
+            double Y1;
+            double X2;
+            double Y2;
+            double distance;     
             
         boolean mainLoop = true;
         int option;
