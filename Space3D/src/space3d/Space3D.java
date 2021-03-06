@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author Kyara Lizeth
  * @author Quilca Evelyn
  * @author Potosi Daniel
- * @author Quishpe Tania 
+ * @author Quishpe Tania. 
  * @author Portero Carla
  */
 public class Space3D {
