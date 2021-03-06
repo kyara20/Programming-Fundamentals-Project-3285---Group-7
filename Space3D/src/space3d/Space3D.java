@@ -187,7 +187,7 @@ public class Space3D {
         int area6 = base * height;
         System.out.println("The area of a rectangle: " + area6);
     }
-       //Compute Distance
+       //Compute Distance between two points
         private static void computeDistance(Scanner input) {
         double X1;
         double Y1;
