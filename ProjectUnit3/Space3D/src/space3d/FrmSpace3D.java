@@ -208,6 +208,11 @@ public class FrmSpace3D extends javax.swing.JFrame {
         String result;
         String result1;
         String result2;
+        Double X1;
+        Double Y1;
+        Double X2;
+        Double Y2;
+        String distance;
         
         inches = Double.parseDouble(txtInches.getText());
         millimeters = inches * 25.4;
@@ -222,6 +227,13 @@ public class FrmSpace3D extends javax.swing.JFrame {
         txtMeters.setText(result1);
         result2 = String.valueOf(kilometers);
         txtKilometers.setText(result2);
+        
+        X1= Double.parseDouble(txtX1.getText());
+        Y1= Double.parseDouble(txtY1.getText());
+        X2= Double.parseDouble(txtX2.getText());
+        Y2= Double.parseDouble(txtY2.getText());
+        distance = Math.sqrt((X2 - X1) * (X2 - X1) + (Y2 - Y1) * (Y2 - Y1));
+        
     }//GEN-LAST:event_btnConvertActionPerformed
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
@@ -231,6 +243,11 @@ public class FrmSpace3D extends javax.swing.JFrame {
         txtMiles.setText("");
         txtMillimeters.setText("");
         txtYards.setText("");
+        txtX1.setText("");
+        txtY1.setText("");
+        txtX2.setText("");
+        txtY2.setText("");
+        
     }//GEN-LAST:event_btnCleanActionPerformed
 
     /**
