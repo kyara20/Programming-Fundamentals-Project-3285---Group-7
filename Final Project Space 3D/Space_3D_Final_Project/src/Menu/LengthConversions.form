@@ -19,6 +19,7 @@
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
+  
 
   <Layout>
     <DimensionLayout dim="0">
@@ -46,6 +47,7 @@
           </Border>
         </Property>
       </Properties>
+      
 
       <Layout>
         <DimensionLayout dim="0">
