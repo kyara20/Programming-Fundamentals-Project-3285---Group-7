@@ -155,9 +155,10 @@ public class Menu_Space3D extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        LengthConversions hello = new LengthConversions();
+        LengthConversion hello = new LengthConversions();
         hello.setVisible(true);
         this.setVisible(false);
+        
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
