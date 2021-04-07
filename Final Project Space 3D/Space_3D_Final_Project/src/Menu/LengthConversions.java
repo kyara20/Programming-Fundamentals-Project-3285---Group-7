@@ -188,21 +188,25 @@ public class LengthConversions extends javax.swing.JFrame {
         miles = Double.parseDouble(txtMiles.getText());
         kilometers = miles * 1.6093;
         
+
         result = String.valueOf(millimeters);
         txtMillimeters.setText(result);
         result1 = String.valueOf(meters);
         txtMeters.setText(result1);
         result2 = String.valueOf(kilometers);
         txtKilometers.setText(result2);
+        
     }//GEN-LAST:event_btnConvertActionPerformed
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+
         txtInches.setText("");
         txtKilometers.setText("");
         txtMeters.setText("");
         txtMiles.setText("");
         txtMillimeters.setText("");
         txtYards.setText("");
+        
     }//GEN-LAST:event_btnCleanActionPerformed
 
     /**
